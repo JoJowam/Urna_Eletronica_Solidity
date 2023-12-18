@@ -1,0 +1,188 @@
+{
+	"compiler": {
+		"version": "0.7.4+commit.3f05b770"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_agenda",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "voter",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum Voting.Option",
+						"name": "option",
+						"type": "uint8"
+					}
+				],
+				"name": "VoteRecorded",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newResident",
+						"type": "address"
+					}
+				],
+				"name": "addResident",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "agenda",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum Voting.Option",
+						"name": "_option",
+						"type": "uint8"
+					}
+				],
+				"name": "getResult",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "manager",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_removedResident",
+						"type": "address"
+					}
+				],
+				"name": "removeResident",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum Voting.Option",
+						"name": "_option",
+						"type": "uint8"
+					}
+				],
+				"name": "vote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"addResident(address)": {
+					"details": "Allows the manager to add a new resident to the voting system.",
+					"params": {
+						"_newResident": "The address of the new resident."
+					}
+				},
+				"getResult(uint8)": {
+					"details": "Gets the list of voters for a specific voting option.",
+					"params": {
+						"_option": "The chosen voting option."
+					},
+					"returns": {
+						"_0": "List of addresses that voted for the specified option."
+					}
+				},
+				"removeResident(address)": {
+					"details": "Allows the manager to remove a resident from the voting system.",
+					"params": {
+						"_removedResident": "The address of the resident to be removed."
+					}
+				},
+				"vote(uint8)": {
+					"details": "Allows a resident to cast their vote for a specific option.",
+					"params": {
+						"_option": "The chosen voting option."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Vote.sol": "Voting"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Vote.sol": {
+			"keccak256": "0x0bad0e0215bedc7fce1ec6a4c2934cc88102d040f3d5e0dfe928c84e6e4ecbb6",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://8a56e6de2c26e2e5ac66273bc1d08ee6dfc0bbe2b03f6ed8cb31e6b3713bf41d",
+				"dweb:/ipfs/QmYYFPi4DBPCCodezWFwsS4p9akogs3vf5imbrf6esLd2S"
+			]
+		}
+	},
+	"version": 1
+}
